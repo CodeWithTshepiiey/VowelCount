@@ -11,17 +11,21 @@ import java.util.Scanner;
 public class VowelCount {
 
     public static void main(String[] args) {
+        //create a scanner 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a sentence: ");
+        //prompt the user to enter a sentence
+        System.out.print("Please enter a sentence: ");
         String sentence = scanner.nextLine();
         
         int vowelCount = countVowels(sentence);
-        System.out.println("Number of vowels: " + vowelCount);
+        //output the number of vowels found in the sentence
+        System.out.println("The number of vowels: " + vowelCount);
         
         scanner.close();
     }
 
     public static int countVowels(String sentence) {
+        //initialize the vowl count
         int count = 0;
         String lowerCaseSentence = sentence.toLowerCase();
         String vowels = "aeiou";
